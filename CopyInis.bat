@@ -31,6 +31,6 @@ if exist "%origen%%gameUserIni%" (
     echo El archivo %gameUserIni% no existe.
 )
 
-echo Operación de copia completada.
+echo Operacion de copia completada.
 pause
 
