@@ -6,4 +6,5 @@ set CLUSTER_ID=ShekoGaming
 set CLUSTER_DIR_OVERRIDE="E:\asaServer"
 set MODS=929800,929420,935408,942024,950914,941697,928650
 set MAX_PLAYERS=10
+set UPDATE_MODS=1
 set SERVER_FLAGS=-NoBattlEye -crossplay -nomansky -lowmemory -preventhibernation -forceAllowCaveFlyers -NoTransferFromFiltering
