@@ -124,8 +124,8 @@ for /L %%i in (1,1,%TOTAL_MAPS%) do (
     if "!Opcion!"=="%%i" set /a SelNum=%%i
 )
 
-if %SelNum% GEQ 1 (
-    call :LaunchServer %SelNum%
+if !SelNum! GEQ 1 (
+    call :LaunchServer !SelNum!
     pause
     goto MENU
 )

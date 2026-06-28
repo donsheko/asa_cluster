@@ -69,7 +69,7 @@ set MOD_11_ACTIVE=1
 
 :: 12) Potions | Gaia Studios
 set MOD_12_ID=928650
-set MOD_12_NAME=Potions | Gaia Studios
+set "MOD_12_NAME=Potions | Gaia Studios"
 set MOD_12_ACTIVE=1
 
 :: 13) More Giga and Carchar Spawns [Crossplay]
