@@ -20,7 +20,7 @@ set MOD_1_ACTIVE=1
 :: 2) Cybers Structures QoL+ (Crossplay)
 set MOD_2_ID=940975
 set MOD_2_NAME=Cybers Structures QoL+ (Crossplay)
-set MOD_2_ACTIVE=0
+set MOD_2_ACTIVE=1
 
 :: 3) Super Spyglass Plus
 set MOD_3_ID=929420
@@ -35,7 +35,7 @@ set MOD_4_ACTIVE=0
 :: 5) Upgrade Station
 set MOD_5_ID=930494
 set MOD_5_NAME=Upgrade Station
-set MOD_5_ACTIVE=0
+set MOD_5_ACTIVE=1
 
 :: 6) Der Dino Finder
 set MOD_6_ID=935408
