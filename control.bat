@@ -9,6 +9,24 @@ if not exist "config.bat" (
 )
 call config.bat
 
+:: Construir la cadena de MODS activos dinamicamente (recorrido secuencial sin limite fijo)
+set "MODS="
+set /a i=1
+:MOD_LOOP
+set "CURR_ID=!MOD_%i%_ID!"
+if "!CURR_ID!"=="" goto MOD_LOOP_END
+set "CURR_ACTIVE=!MOD_%i%_ACTIVE!"
+if "!CURR_ACTIVE!"=="1" (
+    if not defined MODS (
+        set "MODS=!CURR_ID!"
+    ) else (
+        set "MODS=!MODS!,!CURR_ID!"
+    )
+)
+set /a i+=1
+goto MOD_LOOP
+:MOD_LOOP_END
+
 :: 2. Configuracion de puertos base
 set /a BASE_PORT=7778
 set /a BASE_QUERY_PORT=27018
