@@ -13,12 +13,10 @@ call config.bat
 set "MODS="
 set /a i=1
 :MOD_LOOP
-set "VAR_ID=MOD_!i!_ID"
-for /f "delims=" %%a in ("!VAR_ID!") do set "CURR_ID=!%%a!"
+call set "CURR_ID=%%MOD_!i!_ID%%"
 if "!CURR_ID!"=="" goto MOD_LOOP_END
 
-set "VAR_ACTIVE=MOD_!i!_ACTIVE"
-for /f "delims=" %%a in ("!VAR_ACTIVE!") do set "CURR_ACTIVE=!%%a!"
+call set "CURR_ACTIVE=%%MOD_!i!_ACTIVE%%"
 
 if "!CURR_ACTIVE!"=="1" (
     if not defined MODS (
@@ -73,11 +71,11 @@ echo ==========================================================
 echo.
 echo [ SERVIDORES DE MAPAS DISPONIBLES ]
 for /L %%i in (1,1,%TOTAL_MAPS%) do (
-    :: Calcular puertos dinamicos para mostrar en el menu
+    rem Calcular puertos dinamicos para mostrar en el menu
     set /a P_GAME=BASE_PORT + %%i * 2 - 2
     set /a P_QUERY=BASE_QUERY_PORT + %%i * 2 - 2
-    
-    echo   %%i^) !MAP_%%i_NAME! ^(Port: !P_GAME! ^| Query: !P_QUERY!^)
+    call set "CURR_MAP=%%MAP_%%i_NAME%%"
+    echo   %%i^) !CURR_MAP! ^(Port: !P_GAME! ^| Query: !P_QUERY!^)
 )
 echo.
 echo [ ACCIONES ADICIONALES ]
