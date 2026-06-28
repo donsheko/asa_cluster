@@ -180,7 +180,11 @@ set /a QUERY_PORT=BASE_QUERY_PORT + INDEX * 2 - 2
 :: Obtener datos del array
 set MAP_FILE=!MAP_%INDEX%_FILE!
 set MAP_NAME=!MAP_%INDEX%_NAME!
-set SESSION_NAME=SKO %MAP_NAME%
+set SESSION_NAME_TITLE=SKO %MAP_NAME%
+
+:: Definir nombre sin espacios para el parametro SessionName (reemplazar espacios por guion bajo)
+set "SESSION_NAME_CMD=!MAP_NAME: =_!"
+set "SESSION_NAME_CMD=SKO_!SESSION_NAME_CMD!"
 
 :: Definir si se actualizan los mods de CurseForge automaticamente
 set "MOD_UPDATE_FLAG="
@@ -188,9 +192,9 @@ if "!UPDATE_MODS!"=="1" set "MOD_UPDATE_FLAG=-automanagedmods"
 
 echo.
 echo [2/2] Lanzando servidor: %MAP_NAME% en puerto %PORT%...
-echo Comando: %EXE_PATH% %MAP_FILE%?listen?Port=%PORT%?QueryPort=%QUERY_PORT%?SessionName="%SESSION_NAME%" -clusterid=%CLUSTER_ID% -ClusterDirOverride=%CLUSTER_DIR_OVERRIDE% -mods=%MODS% %SERVER_FLAGS% %MOD_UPDATE_FLAG% -WinLiveMaxPlayers=%MAX_PLAYERS%
+echo Comando: %EXE_PATH% %MAP_FILE%?listen?Port=%PORT%?QueryPort=%QUERY_PORT%?SessionName=%SESSION_NAME_CMD% -clusterid=%CLUSTER_ID% -ClusterDirOverride=%CLUSTER_DIR_OVERRIDE% -mods=%MODS% %SERVER_FLAGS% %MOD_UPDATE_FLAG% -WinLiveMaxPlayers=%MAX_PLAYERS%
 
 :: Lanzar en una nueva ventana CMD con titulo de la sesion
-start "%SESSION_NAME%" %EXE_PATH% %MAP_FILE%?listen?Port=%PORT%?QueryPort=%QUERY_PORT%?SessionName="%SESSION_NAME%" -clusterid=%CLUSTER_ID% -ClusterDirOverride=%CLUSTER_DIR_OVERRIDE% -mods=%MODS% %SERVER_FLAGS% %MOD_UPDATE_FLAG% -WinLiveMaxPlayers=%MAX_PLAYERS%
+start "%SESSION_NAME_TITLE%" %EXE_PATH% %MAP_FILE%?listen?Port=%PORT%?QueryPort=%QUERY_PORT%?SessionName=%SESSION_NAME_CMD% -clusterid=%CLUSTER_ID% -ClusterDirOverride=%CLUSTER_DIR_OVERRIDE% -mods=%MODS% %SERVER_FLAGS% %MOD_UPDATE_FLAG% -WinLiveMaxPlayers=%MAX_PLAYERS%
 
 exit /b
