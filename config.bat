@@ -15,12 +15,12 @@ set SERVER_FLAGS=-NoBattlEye -crossplay -nomansky -lowmemory -preventhibernation
 :: 1) TG Stacking Mod 1000-50
 set MOD_1_ID=929800
 set MOD_1_NAME=TG Stacking Mod 1000-50
-set MOD_1_ACTIVE=1
+set MOD_1_ACTIVE=0
 
 :: 2) Cybers Structures QoL+ (Crossplay)
 set MOD_2_ID=940975
 set MOD_2_NAME=Cybers Structures QoL+ (Crossplay)
-set MOD_2_ACTIVE=1
+set MOD_2_ACTIVE=0
 
 :: 3) Super Spyglass Plus
 set MOD_3_ID=929420
@@ -30,7 +30,7 @@ set MOD_3_ACTIVE=1
 :: 4) Automated Ark
 set MOD_4_ID=928597
 set MOD_4_NAME=Automated Ark
-set MOD_4_ACTIVE=0
+set MOD_4_ACTIVE=1
 
 :: 5) Upgrade Station
 set MOD_5_ID=930494
@@ -70,7 +70,7 @@ set MOD_11_ACTIVE=1
 :: 12) Potions | Gaia Studios
 set MOD_12_ID=928650
 set "MOD_12_NAME=Potions | Gaia Studios"
-set MOD_12_ACTIVE=1
+set MOD_12_ACTIVE=0
 
 :: 13) More Giga and Carchar Spawns [Crossplay]
 set MOD_13_ID=946536
@@ -106,3 +106,8 @@ set MOD_18_ACTIVE=0
 set MOD_19_ID=1123495
 set MOD_19_NAME=Dino Upgrade Potions!
 set MOD_19_ACTIVE=0
+
+:: 20) Vanilla with Sprinkles
+set MOD_20_ID=1188679
+set MOD_20_NAME=Vanilla with Sprinkles 
+set MOD_20_ACTIVE=1

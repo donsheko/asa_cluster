@@ -1,0 +1,8 @@
+[CybersStructures]
+AllowIntakeToPlaceWithoutWater=True
+UseInGameSettings=false
+PropagatorSlotCount=500
+PropagatorModCostMutate=-1
+PropagatorModCostBreed=-1
+PropagatorModCostGender=-1
+PropagatorMutationStackCount=255
