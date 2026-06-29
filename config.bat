@@ -20,7 +20,7 @@ set MOD_1_ACTIVE=0
 :: 2) Cybers Structures QoL+ (Crossplay)
 set MOD_2_ID=940975
 set MOD_2_NAME=Cybers Structures QoL+ (Crossplay)
-set MOD_2_ACTIVE=0
+set MOD_2_ACTIVE=1
 
 :: 3) Super Spyglass Plus
 set MOD_3_ID=929420
